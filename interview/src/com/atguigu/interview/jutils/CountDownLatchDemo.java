@@ -28,6 +28,5 @@ public class CountDownLatchDemo {
         countDownLatch.await();
         System.out.println(Thread.currentThread().getName()+"\t 秦 一统 华夏");
 
-
     }
 }

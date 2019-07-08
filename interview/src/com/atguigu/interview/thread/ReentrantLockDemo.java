@@ -36,10 +36,8 @@ class Phone{
         sendEmail();
     }
 
-
     public synchronized void sendEmail() throws Exception{
         System.out.println(Thread.currentThread().getName()+"\t ........invoke sendEmail");
     }
-
 
 }

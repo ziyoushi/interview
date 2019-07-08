@@ -20,7 +20,6 @@ public class ArrayListDemo {
             },String.valueOf(i)).start();
         }
 
-
     }
 
 }

@@ -20,7 +20,6 @@ public class DeadThreadDemo {
 }
 
 class HoldThread implements Runnable{
-
     private String lockA;
     private String lockB;
 

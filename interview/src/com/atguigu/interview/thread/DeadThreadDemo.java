@@ -33,11 +33,12 @@ class HoldThread implements Runnable{
         synchronized (lockA){
             System.out.println(Thread.currentThread().getName()+"\t 自己持有"+lockA+"\t 尝试持有"+lockB);
             try { TimeUnit.SECONDS.sleep( 4); } catch (InterruptedException e) { e.printStackTrace(); }
+
+            synchronized (lockB){
+                System.out.println(Thread.currentThread().getName()+"\t 自己持有"+lockB+"\t 尝试持有"+lockA);
+                try { TimeUnit.SECONDS.sleep( 4); } catch (InterruptedException e) { e.printStackTrace(); }
+            }
         }
 
-        synchronized (lockB){
-            System.out.println(Thread.currentThread().getName()+"\t 自己持有"+lockB+"\t 尝试持有"+lockA);
-            try { TimeUnit.SECONDS.sleep( 4); } catch (InterruptedException e) { e.printStackTrace(); }
-        }
     }
 }

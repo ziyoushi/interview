@@ -6,6 +6,8 @@ import java.util.concurrent.TimeUnit;
  * @author Administrator
  * @create 2019-07-08 19:22
  * 死锁
+ * 使用jps定位进程号
+ * 使用jstack找到死锁的位置
  */
 public class DeadThreadDemo {
     public static void main(String[] args) {

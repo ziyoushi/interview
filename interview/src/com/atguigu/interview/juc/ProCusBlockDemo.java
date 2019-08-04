@@ -46,8 +46,6 @@ public class ProCusBlockDemo {
         System.out.println();
         System.out.println();
         resource.stop();
-
-
     }
 }
 
@@ -81,7 +79,6 @@ class MyResource {
             try { TimeUnit.SECONDS.sleep( 1); } catch (InterruptedException e) { e.printStackTrace(); }
 
         }
-        //try { TimeUnit.SECONDS.sleep( 1); } catch (InterruptedException e) { e.printStackTrace(); }
         System.out.println(Thread.currentThread().getName() + "\t 大老板叫停,flag=false生产线程结束");
     }
 
@@ -108,5 +105,4 @@ class MyResource {
     public void stop() throws Exception {
         this.flag = false;
     }
-
 }

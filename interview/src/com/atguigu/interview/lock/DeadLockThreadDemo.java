@@ -12,7 +12,7 @@ public class DeadLockThreadDemo {
         String lockB = "lockB";
 
         new Thread(new HoldLock(lockA,lockB),"AAA").start();
-        new Thread(new HoldLock(lockB,lockA),"AAA").start();
+        new Thread(new HoldLock(lockB,lockA),"BBB").start();
 
     }
 }
